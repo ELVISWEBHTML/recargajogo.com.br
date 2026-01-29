@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Player Redirect</title>
+</head>
+<body>
+
+  <form onsubmit="redirect(event)">
+    <input 
+      type="number" 
+      id="playerId" 
+      placeholder="Digite o ID" 
+      required
+    >
+    <button type="submit">Buscar</button>
+  </form>
+
+  <script>
+    function redirect(e) {
+      e.preventDefault();
+      const id = document.getElementById("playerId").value;
+      window.location.href = `/player?id=${id}`;
+    }
+  </script>
+
+</body>
+</html>
